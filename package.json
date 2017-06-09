@@ -1,0 +1,19 @@
+{
+  "name": "skwai",
+  "version": "1.0.0",
+  "description": "skwai.com",
+  "main": "index.js",
+  "author": "Cameron <me@skwai.com>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "yarn run styles && yarn run copy && yarn run inline",
+    "styles": "stylus --compress < styles/main.styl > dist/main.css",
+    "copy": "cp -R public/ dist/",
+    "deploy": "firebase deploy",
+    "inline": "juice dist/index.html dist/index.html"
+  },
+  "devDependencies": {
+    "stylus": "^0.54.5",
+    "juice": "^4.1.0"
+  }
+}

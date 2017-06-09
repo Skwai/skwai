@@ -1,0 +1,71 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  background: #f1f2f3;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font: 400 1rem/1.428 "Open Sans", sans-serif;
+  text-rendering: geometricPrecision;
+  font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+  text-align: center;
+  color: #222;
+}
+
+.Doc {
+  padding: 2rem;
+}
+
+.Title {
+  letter-spacing: -0.025em;
+  font-size: calc(2rem + 1vmin);
+  font-weight: 700;
+  margin: 0 0 1rem;
+  line-height: 1;
+}
+
+.Description {
+  margin: 0 0 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.Contact {
+  margin: 0 0 0;
+  font-style: normal;
+}
+
+.Seperator {
+  display: inline-block;
+  margin: 0 .75rem;
+  width: .35rem;
+  height: .35rem;
+  border-radius: 50%;
+  background: rgba(0,0,0,.1);
+}
+
+.Btn {
+  border-radius: 99px;
+  text-decoration: none;
+  background: #fff;
+  display: inline-block;
+  padding: 1rem 2rem;
+  color: inherit;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  box-shadow: rgba(0,0,0,.1) 0 3px 0;
+  transition: 0.2s;
+
+  &:hover, &:focus, &:active {
+    background: #0972E6;
+    text-shadow: rgba(0,0,0,.2) 0 1px 0
+    box-shadow: darken(#0972E6, 10) 0 3px 0;
+    color: #fff;
+  }
+}
