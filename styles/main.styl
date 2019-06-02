@@ -1,19 +1,37 @@
 html {
-  font-size: 16px;
+  font-size: 14px;
+
+  @media (min-width: 640px) {
+    font-size: 15px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
 }
 
 body {
+  $stroke = rgba(0,0,0,.05)
   margin: 0;
-  background: #f1f2f3;
   display: flex;
   min-height: 100vh;
   justify-content: center;
   align-items: center;
-  font: 400 1rem/1.428 "Open Sans", sans-serif;
+  font: 400 1rem/1.428 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   text-rendering: geometricPrecision;
-  font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
   text-align: center;
-  color: #222;
+  color: #fff;
+  background: #396EE8 linear-gradient(45deg, transparent 45%, $stroke 45%, $stroke 55%, transparent 55%);
+  background-size: 25px 25px;
+  letter-spacing: 0.03em;
+}
+
+a {
+  color: inherit;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .Doc {
@@ -21,11 +39,11 @@ body {
 }
 
 .Title {
-  letter-spacing: -0.025em;
-  font-size: calc(2rem + 1vmin);
+  font-size: 2.5rem;
   font-weight: 700;
   margin: 0 0 1rem;
   line-height: 1;
+  text-shadow: rgba(0,0,0,.2) 0 1px 0;
 }
 
 .Description {
@@ -37,7 +55,7 @@ body {
 }
 
 .Contact {
-  margin: 0 0 0;
+  margin: 0;
   font-style: normal;
 }
 
@@ -47,25 +65,24 @@ body {
   width: .35rem;
   height: .35rem;
   border-radius: 50%;
-  background: rgba(0,0,0,.1);
+  background: rgba(0,0,0,.2);
 }
 
 .Btn {
   border-radius: 99px;
   text-decoration: none;
-  background: #fff;
   display: inline-block;
-  padding: 1rem 2rem;
+  padding: 0.5em 1.5em;
   color: inherit;
+  margin: 0.5em 0.25em;
   font-weight: 600;
-  letter-spacing: 0.03em;
-  box-shadow: rgba(0,0,0,.1) 0 3px 0;
-  transition: 0.2s;
+  color: white;
+  min-width: 7rem;
+  border: white solid 2px;
 
-  &:hover, &:focus, &:active {
-    background: #0972E6;
-    text-shadow: rgba(0,0,0,.2) 0 1px 0
-    box-shadow: darken(#0972E6, 10) 0 3px 0;
-    color: #fff;
+  &:hover {
+    background: white;
+    border-color: white;
+    color: #396EE8;
   }
 }

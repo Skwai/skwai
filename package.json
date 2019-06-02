@@ -6,14 +6,12 @@
   "author": "Cameron <me@skwai.com>",
   "license": "UNLICENSED",
   "scripts": {
-    "build": "yarn run styles && yarn run copy && yarn run inline",
+    "build": "yarn run styles && yarn run copy",
     "styles": "stylus --compress < styles/main.styl > dist/main.css",
-    "copy": "cp -R public/ dist/",
-    "deploy": "firebase deploy",
-    "inline": "juice dist/index.html dist/index.html"
+    "copy": "cp -R public/ dist/ && cp ./index.html dist/index.html",
+    "deploy": "yarn build && firebase deploy"
   },
   "devDependencies": {
-    "stylus": "^0.54.5",
-    "juice": "^4.1.0"
+    "stylus": "^0.54.5"
   }
 }

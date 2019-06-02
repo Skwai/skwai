@@ -3,6 +3,10 @@
     "public": "dist",
     "rewrites": [
       {
+        "source": "/to/**",
+        "dynamicLinks": true
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }
