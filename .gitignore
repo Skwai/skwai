@@ -3,3 +3,4 @@ node_modules/
 .firebaserc
 yarn-error.log
 .firebase
+dist/
