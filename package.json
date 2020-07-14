@@ -6,7 +6,7 @@
   "author": "Cameron <me@skwai.com>",
   "license": "UNLICENSED",
   "scripts": {
-    "build": "yarn run styles && yarn run copy",
+    "build": "yarn run copy && yarn run styles",
     "styles": "stylus --compress < styles/main.styl > dist/main.css",
     "copy": "cp -R public/ dist/ && cp ./index.html dist/index.html",
     "deploy": "yarn build && firebase deploy"
