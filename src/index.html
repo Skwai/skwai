@@ -2,8 +2,7 @@
 <html lang="en-AU">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1,width=device-width" />
-    <title>Cameron Jensen | Software Developer</title>
+    <title>Cameron Jensen | Software Engineer | Hobart, Australia</title>
     <meta
       name="description"
       content="Personal website of Cameron Jensen. A software developer from Hobart, Australia"
@@ -17,7 +16,6 @@
     <meta property="og:url" content="https://skwai.com" />
     <meta property="twitter:card" value="summary" />
     <meta property="twitter:site" content="@skwai" />
-
     <link
       rel="preconnect"
       href="https://firebaseinstallations.googleapis.com"
@@ -43,10 +41,17 @@
       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
     ></script>
 
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="styles.scss" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
-    <main class="Doc" itemscope itemtype="https://schema.org/Person">
+    <main>
       <header>
         <h1 class="Title" itemprop="name">
           <span itemprop="givenName">Cameron</span>
@@ -54,29 +59,26 @@
         </h1>
       </header>
 
-      <p class="Description">
-        <span itemprop="jobTitle">
-          Software Developer
-        </span>
-        <span class="Seperator"></span>
-        <span
-          itemprop="homeLocation"
-          itemscope
-          itemtype="https://schema.org/Place"
-        >
-          <span itemprop="name">Hobart, Australia</span>
-        </span>
-      </p>
+      <div class="Title" itemprop="jobTitle">Software Engineer</div>
 
-      <address class="Contact">
-        <a class="Btn" itemprop="email" href="mailto:me@skwai.com">Email</a>
-        <a class="Btn" href="https://github.com/skwai">GitHub</a>
+      <div
+        class="Location"
+        itemprop="homeLocation"
+        itemscope
+        itemtype="https://schema.org/Place"
+      >
+        <span itemprop="name">Hobart, Australia</span>
+      </div>
+
+      <div class="Contact">
+        <a class="Link" itemprop="email" href="mailto:me@skwai.com">Email</a>
+        <a class="Link" href="https://github.com/skwai">GitHub</a>
         <a
-          class="Btn"
+          class="Link"
           href="https://www.linkedin.com/in/cameron-jensen-0958931b/"
           >LinkedIn</a
         >
-      </address>
+      </div>
     </main>
 
     <script>
@@ -87,7 +89,7 @@
         projectId: "skwai-459e2",
         storageBucket: "skwai-459e2.appspot.com",
         messagingSenderId: "477066989417",
-        appId: "1:477066989417:web:b108ed8b6c4ac049",
+        appId: "1:477066989417:web:b108ed8b6c4ac049"
       };
 
       (function (sa, fbc) {
