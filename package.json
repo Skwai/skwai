@@ -1,17 +1,17 @@
 {
   "name": "skwai",
-  "version": "1.0.0",
   "description": "skwai.com",
-  "main": "index.js",
   "author": "Cameron <me@skwai.com>",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "source": "src/index.html",
   "license": "UNLICENSED",
   "scripts": {
-    "build": "yarn run copy && yarn run styles",
-    "styles": "stylus --compress < styles/main.styl > dist/main.css",
-    "copy": "cp -R public/ dist/ && cp ./index.html dist/index.html",
+    "start": "parcel",
+    "build": "parcel build",
     "deploy": "yarn build && firebase deploy"
   },
   "devDependencies": {
-    "stylus": "^0.54.5"
+    "@parcel/transformer-sass": "2.3.2",
+    "parcel": "^2.3.2"
   }
 }
