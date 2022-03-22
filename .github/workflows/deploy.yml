@@ -20,7 +20,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - run: npm run build --if-present
-      - run: npm test
       - uses: lowply/deploy-firebase@v0.0.5
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
